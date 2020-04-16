@@ -35,7 +35,8 @@ router.use(bodyParser.json())
 router.use((req, res, next) => setTimeout(next, 3000))
 
 router.use('/auth', require('./auth'))
-router.use('/profile', require('./profile')(router))
+router.use('/content', require('./content'))
+router.use('/profile', require('./profile'))
 
 // router.use('/products', require('./products'));
 

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   title: 'New Emojis Are Here. We’re Not Ready.',
   subtitle: 'Each year brings new additions outdated tech can barely support',
   excerpt: 'Each year brings new additions outdated tech can barely support',

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   title: 'Just a content piece',
   subtitle: 'Each year brings new additions outdated tech can barely support',
   excerpt: 'Each year brings new additions outdated tech can barely support',
