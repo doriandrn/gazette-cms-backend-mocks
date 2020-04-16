@@ -1,0 +1,17 @@
+{
+  "name": "g-server-mocks",
+  "version": "1.0.0",
+  "description": "Fake server for GCMS development",
+  "main": "index.js",
+  "author": "Dorian Tudorache<dorian.snaz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.3",
+    "jsonwebtoken": "^8.5.1",
+    "node-base64-image": "^1.0.7"
+  }
+}
