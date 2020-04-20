@@ -32,7 +32,7 @@ function errorHandler (err, req, res, next) {
 // Install middleware
 router.use(cookieParser())
 router.use(bodyParser.json())
-router.use((req, res, next) => setTimeout(next, 3000))
+// router.use((req, res, next) => setTimeout(next, 3000))
 
 router.use('/auth', require('./auth'))
 router.use('/content', require('./content'))

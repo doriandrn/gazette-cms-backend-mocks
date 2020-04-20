@@ -1,5 +1,9 @@
 module.exports = [
   {
+    name: 'Test',
+    color: 'black'
+  },
+  {
     name: 'Tech',
     color: 'blue'
   },

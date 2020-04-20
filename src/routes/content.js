@@ -1,5 +1,6 @@
-// var fs = require('fs')
+var fs = require('fs')
 var path = require('path')
+const getUserBy = require('../data/users').getUserBy
 
 function resolve(dir) {
   return path.join(__dirname, '.', dir)
@@ -7,31 +8,30 @@ function resolve(dir) {
 
 var router = require('express').Router();
 
-  // router.get('/', function (req, res, next) {
-  //   res.render('users');
-  // });
+const contentDir = resolve('../data/content')
 
-  // router.param('userid', function (req, res, next, userid) {
-  //     // req.user = User.findById(userid);
-  //     req.userid = userid;
-  // });
+const content = {}
+
+const files = fs.readdirSync(contentDir)
+files
+  .filter(filename => filename.indexOf('.js') === filename.length - 3)
+  .map(filename => filename.replace('.js', ''))
+  .forEach(file => { content[file] = require(`${contentDir}/${file}`); console.log(file) })
+console.log(content)
+
+router.get('/trending', function (req, res, next) {
+
+})
 
 router.get('/:slug', function (req, res, next) {
-  console.log('sc', req.params.slug)
   try {
     const content = require(resolve('../data/content/') + req.params.slug)
+    if (content.authors && content.authors.length) {
+      content.authors = content.authors.map(id => getUserBy('id', id))
+    }
     res.json(content)
-    // console.log('c', content)
-    // res.render('content', { content })
   } catch (e) {
-    console.error('eee', e)
   }
-  // res.json(getContentBy('id', req.params.contentid))
-    // console.log('requested user', req.params.userid)
-    // req.user.exec(function (err, user) {
-    //     if (err) { return next(err); }
-    //     res.render('user', {user: user});
-    // });
 });
 
 module.exports = router

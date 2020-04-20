@@ -21,7 +21,7 @@ router.use(
 router.post('/login', (req, res, next) => {
   const { username, password } = req.body
   const valid = username.length && password === '123'
-  const expiresIn = 15
+  const expiresIn = 15000
   const refreshToken = Math.floor(Math.random() * (1000000000000000 - 1 + 1)) + 1
 
   if (!valid) {

@@ -45,6 +45,7 @@ module.exports = {
 
 <blockquote>No one wants to scroll past 52,000 family emojis to get to the lion or baseball.</blockquote>
 `,
+  commentsEnabled: false,
   comments: [
     {
       comment: 'This is a demo comment 😐',
