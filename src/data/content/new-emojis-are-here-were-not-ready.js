@@ -12,7 +12,7 @@ module.exports = {
   originalURL: 'https://onezero.medium.com/new-emojis-are-here-were-not-ready-e7f9de4779d2',
   reviews: [{}],
   authors: [0, 1],
-  categories: [0, 2, 3],
+  topics: [0, 2, 3],
   tags: ['reading', 'emojis', 'amazon'],
   content: `
 <p>😐 Last month, Apple added 158 new emojis to iOS, but the emoji keyboard on iPhone — the primary means of accessing each of these characters — remains almost identical to the one we used nearly a decade ago.</p>

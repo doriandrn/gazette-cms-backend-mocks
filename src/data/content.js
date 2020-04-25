@@ -14,4 +14,4 @@ files
   .filter(filename => filename.indexOf('.js') === filename.length - 3)
   .map(filename => filename.replace('.js', ''))
   .forEach(file => { content[file] = require(`${contentDir}/${file}`); console.log(file) })
-console.log(content)
+// console.log(content)

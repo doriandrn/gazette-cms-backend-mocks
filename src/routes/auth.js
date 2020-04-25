@@ -30,7 +30,7 @@ router.post('/login', (req, res, next) => {
 
   const accessToken = jsonwebtoken.sign(
     {
-      username,
+      handle: username,
       picture: 'https://github.com/nuxt.png',
       name: 'User ' + username,
       scope: ['test', 'user']
@@ -42,7 +42,7 @@ router.post('/login', (req, res, next) => {
   refreshTokens[refreshToken] = {
     accessToken,
     user: {
-      username,
+      handle: username,
       picture: 'https://github.com/nuxt.png',
       name: 'User ' + username
     }
